@@ -38,7 +38,7 @@ metadata:
 spec:
   ports:
   - nodePort: 32243
-    port: 80
+    port: 8080
     protocol: TCP
     targetPort: 80
   selector:
@@ -62,7 +62,7 @@ spec:
           service:
             name: myweb
             port:
-              number: 80
+              number: 8080
         path: /myweb
         pathType: Exact
 status:
