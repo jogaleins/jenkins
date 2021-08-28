@@ -43,4 +43,27 @@ spec:
     targetPort: 80
   selector:
     app: myweb
-  type: NodePort
+  type: ClusterIP
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  name: myweb-ing
+  namespace: pipeline-demo
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: cloud-rm.duckdns.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: myweb
+            port:
+              number: 80
+        path: /myweb
+        pathType: Exact
+status:
+  loadBalancer: {}
