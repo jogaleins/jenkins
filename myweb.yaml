@@ -23,7 +23,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: justmeandopensource/myweb:<TAG>
+      - image: jogaleins/myweb:<TAG>
         imagePullPolicy: Always
         name: myweb
 
@@ -37,7 +37,7 @@ metadata:
   namespace: pipeline-demo
 spec:
   ports:
-  - nodePort: 32223
+  - nodePort: 32243
     port: 80
     protocol: TCP
     targetPort: 80
