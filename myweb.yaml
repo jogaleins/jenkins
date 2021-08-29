@@ -41,7 +41,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: nginx
+    app: myweb
   type: ClusterIP
 
 ---
