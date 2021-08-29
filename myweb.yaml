@@ -51,6 +51,8 @@ metadata:
   creationTimestamp: null
   name: myweb-ing
   namespace: pipeline-demo
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
