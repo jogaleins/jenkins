@@ -37,7 +37,7 @@ metadata:
   namespace: pipeline-demo
 spec:
   ports:
-  - port: 8080
+  - port: 80
     protocol: TCP
     targetPort: 80
   selector:
@@ -64,7 +64,7 @@ spec:
           service:
             name: myweb
             port:
-              number: 8080
+              number: 80
         path: /myweb
         pathType: Exact
 status:
