@@ -52,6 +52,7 @@ metadata:
   name: myweb-ing
   namespace: pipeline-demo
   annotations:
+    kubernetes.io/ingress.class: nginx
     ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
